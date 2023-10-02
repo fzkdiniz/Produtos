@@ -1,0 +1,50 @@
+-- CRIAÇÃO DE TABELAS
+CREATE TABLE Produtos (
+    id_produto INT PRIMARY KEY,
+    nome VARCHAR(150) NOT NULL,
+    preco DECIMAL(10, 2) NOT NULL,
+    estoque INT NOT NULL,
+    perecivel BOOLEAN NOT NULL,
+    marca VARCHAR(100),
+    nacionalidade VARCHAR(100)
+);
+
+-- Inserção de cinco produtos
+INSERT INTO Produtos (id_produto, nome, preco, estoque, perecivel, marca, nacionalidade)
+VALUES
+    (1, 'Samurai Edge', 5000.00, 1, TRUE, 'Beretta', 'Italia'),
+    (2, 'Shotgun', 10000.00, 2, FALSE, 'Rossi', 'Brasil'),
+    (3, 'Hand Granade', 900.99, 5, TRUE, 'H&K', 'Alemanha'),
+    (4, 'Sniper', 22000.00, 1, FALSE, 'Springfield Armory', 'USA'),
+    (5, 'Firs Aid Kit', 49.99, 150, TRUE, 'Umbrella', 'USA');
+
+SELECT COUNT(*) AS total_produtos
+FROM Produtos;
+
+
+SELECT AVG(preco) AS preco_medio
+FROM Produtos;
+
+SELECT perecivel, AVG(preco) AS preco_médio
+FROM Produtos
+GROUP BY perecivel;
+
+
+SELECT nome, AVG(preco) AS preco_médio
+FROM Produtos
+GROUP BY nome;
+
+SELECT AVG(preco) AS preco_médio, SUM(estoque) AS total_estoque
+FROM Produtos;
+
+SELECT nome, marca, estoque
+FROM Produtos
+WHERE preco = (SELECT MAX(preco) FROM Produtos);
+
+SELECT *
+FROM Produtos
+WHERE preco > (SELECT AVG(preco) FROM Produtos);
+
+SELECT nacionalidade, COUNT(*) AS quantidade
+FROM Produtos
+GROUP BY nacionalidade;
