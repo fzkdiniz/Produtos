@@ -1,4 +1,7 @@
+https://github.com/fzkdiniz/Produtos/blob/main/--%20CRIA%C3%87%C3%83O%20DE%20TABELAS.txt
+
 ETAPA 1
+
 ![image](https://github.com/fzkdiniz/Produtos/assets/61026576/9bef7a53-0472-4339-9f59-2392db8c0813)
 
 
@@ -43,3 +46,6 @@ Crie o ReadMe com base no modelo disponibilizado em aula;
 Tire um print da tela do WorkBench e insira no ReadMe;
 
 Envie na atividade somente o link do repositório criado.
+
+
+https://github.com/fzkdiniz/Produtos/blob/main/--%20CRIA%C3%87%C3%83O%20DE%20TABELAS.txt
